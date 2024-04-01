@@ -1,0 +1,80 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Creación de Vehículo</h3>
+  </div>
+
+  <div class="card-body container">
+    <div class="row">
+
+      <div class="col-12">
+
+        <form [formGroup] ="formulario">
+
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Código</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="codigo" formControlName="codigo">
+              <!-- <span class="text-danger" *ngIf="formulario.controls['codigo'].errors?.required">Valor requerido</span> -->
+
+              <!-- <span class="text-danger" *ngIf="formulario.controls['codigo'].errors?.codigoValidate">Debe tener por lo menos cuatro dígitos</span>  -->
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="staticMarca" class="col-sm-2 col-form-label">Marca</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="marca" formControlName="marca">
+            </div>          
+          </div>
+
+          <div class="mb-3 row">
+            <label for="staticModelo" class="col-sm-2 col-form-label">Modelo</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="modelo" formControlName="modelo">
+            </div>          
+          </div>
+
+          <div class="mb-3 row">
+            <label for="staticAnio" class="col-sm-2 col-form-label">Año</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="anio" formControlName="anio">
+            </div>          
+          </div>
+
+          <!-- <div class="mb-3 row">
+            <label for="staticColor" class="col-sm-2 col-form-label">Color</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="color" formControlName="color">
+            </div>          
+          </div> -->
+
+          <div class="mb-3 row">
+            <label for="staticKilometraje" class="col-sm-2 col-form-label">Kilometraje</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="kilometraje" formControlName="kilometraje">
+            </div>          
+          </div>
+
+          <div class="mb-3 row">
+            <label for="staticPrecio" class="col-sm-2 col-form-label">Precio</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="precio" formControlName="precio">
+            </div>          
+          </div>
+
+          <div class="mb-3 row">
+            <label for="staticCalificacion" class="col-sm-2 col-form-label">Calificación</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="calificacion" formControlName="calificacion">
+            </div>          
+          </div>
+
+      </form>
+      </div>
+    </div>   
+    
+    <div class="row justify-content-center">
+      <button class="btn btn-info" style="width: 200px;" (click)="guardar()">GUARDAR</button>
+    </div>
+  </div>
+</div>

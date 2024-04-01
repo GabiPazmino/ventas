@@ -1,0 +1,79 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{title}}</h3>   
+  </div>
+
+  <div class="card-body container">
+    <div class="row">
+
+      <div class="col-12">
+
+        <form [formGroup] ="formulario">
+
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Nombre</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="nombre" formControlName="nombre">              
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Apellido</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id ="staticCodigo" name="apellido" formControlName="apellido">              
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Password</label>            
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id ="staticCodigo" name="password" formControlName="password">              
+            </div>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" formControlName="quiereContacto" (change)="quiereContacto = !quiereContacto" class="form-check-input" id="proporcionaDatos">
+            <label class="form-check-label" for="proporcionaDatos">¿Desea contacto?</label>
+          </div>
+
+          <div class="mb-3" *ngIf="quiereContacto">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Email</label>             
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id ="staticCodigo" name="email" formControlName="email" >              
+            </div>           
+            <div id="correoHelp" class="form-text">
+              Nunca compartiremos tu correo con nadie.
+            </div>
+          </div>
+
+          <div class="mb-3" *ngIf="quiereContacto">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Telefono</label>             
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id ="staticCodigo" name="telefono" formControlName="telefono" >              
+            </div>           
+            <div id="correoHelp" class="form-text">
+              Tu teléfono está seguro con nosotros.
+            </div>
+          </div>
+
+             
+
+        </form>
+      </div>
+    </div>   
+    
+    <div class="row ">
+      <button class="btn btn-info" style="width:10vw" (click)="registra()">Registrar</button>           
+    </div>
+    <br>
+
+    <div class="card-footer">
+      <div class="row justify-content-center">
+        <br>
+        <button class='btn btn-success' style="width:110px" (click)="goInicio()">
+          Home
+        </button>    
+      </div>
+    </div>
+  </div>
+</div>

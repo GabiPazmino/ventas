@@ -1,0 +1,19 @@
+h2{
+    color: rgb(53, 52, 52);
+    font-weight: bolder;
+    font-size: 350%;
+    text-align: left;
+    margin-bottom: 360px;
+}
+
+h4{
+    color: rgb(53, 52, 52);
+    font-weight: bolder;
+    font-size: 380%;
+    text-align: right;
+    margin-top: 410px;
+}
+
+img {
+    opacity: 0.75; 
+  }
